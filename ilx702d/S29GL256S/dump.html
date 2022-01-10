@@ -1,0 +1,29 @@
+<html>
+<link rel="stylesheet" type="text/css" href="index.css">
+<body>
+
+<pre>
+Flash layout : Cypress S29GL256S - 256Mbit (32MB)
+
+    nor@0,0 {
+        compatible = "cfi-flash";
+        reg = <0 0 0x02000000>;
+        bank-width = <2>;
+        partition@0       { label = "<a href=/ilx702d/S29GL256S/mtdblock0>bootloader</a>";       reg = <0x0       0x80000>;  }; #  512 KB
+        partition@80000   { label = "<a href=/ilx702d/S29GL256S/mtdblock1>reserved1</a>";        reg = <0x80000   0x20000>;  }; #  128 KB
+        partition@a0000   { label = "<a href=/ilx702d/S29GL256S/mtdblock2>dtb-1</a>";            reg = <0xa0000   0x40000>;  }; #  256 KB
+        partition@e0000   { label = "<a href=/ilx702d/S29GL256S/mtdblock3>kernel-1</a>";         reg = <0xe0000   0x600000>; }; # 6144 KB
+        partition@6e0000  { label = "<a href=/ilx702d/S29GL256S/mtdblock4>dtb-2</a>";            reg = <0x6e0000  0x40000>;  }; #  256 KB
+        partition@720000  { label = "<a href=/ilx702d/S29GL256S/mtdblock5>kernel-2</a>";         reg = <0x720000  0x600000>; }; # 6144 KB
+        partition@d20000  { label = "<a href=/ilx702d/S29GL256S/mtdblock6>dtb-Update</a>";       reg = <0xd20000  0x40000>;  }; #  256 KB
+        partition@d60000  { label = "<a href=/ilx702d/S29GL256S/mtdblock7>kernel-Update</a>";    reg = <0xd60000  0x600000>; }; # 6144 KB
+        partition@1360000 { label = "<a href=/ilx702d/S29GL256S/mtdblock8>splash1</a>";          reg = <0x1360000 0x120000>; }; # 1152 KB
+        partition@1480000 { label = "<a href=/ilx702d/S29GL256S/mtdblock9>splash2</a>";          reg = <0x1480000 0x120000>; }; # 1152 KB
+        partition@1560000 { label = "<a href=/ilx702d/S29GL256S/mtdblock10>reserved2</a>";        reg = <0x15a0000 0x920000>; }; # 9344 KB
+        partition@1ec0000 { label = "<a href=/ilx702d/S29GL256S/mtdblock11>dab learn memory</a>"; reg = <0x1ec0000 0x60000>;  }; #  384 KB
+        partition@1f20000 { label = "<a href=/ilx702d/S29GL256S/mtdblock12>ec-nr params</a>";     reg = <0x1f20000 0x20000>;  }; #  128 KB
+        partition@1f40000 { label = "<a href=/ilx702d/S29GL256S/mtdblock13>settings</a>";         reg = <0x1f40000 0xA0000>;  }; #  640 KB
+        partition@1fe0000 { label = "<a href=/ilx702d/S29GL256S/mtdblock14>reserved3</a>";        reg = <0x1fe0000 0x20000>;  }; #  128 KB
+    };
+                                                                                       # 32768 KB total
+</pre>

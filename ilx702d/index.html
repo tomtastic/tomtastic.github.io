@@ -1,0 +1,269 @@
+<html>
+<link rel="stylesheet" type="text/css" href="index.css">
+<body>
+
+
+<table border=0 cellspacing=15>
+<tr>
+  <td>
+    <img src="iLX-702D.jpeg" width=80%></img>
+  </td>
+  <td colspan="2">
+<pre>
+<div class="bullet bullet">Alpine iLX-702D</div>
+
+Hardware : NXP i.MX 6Dual
+           2-core Cortex-A9 @852MHz
+           DDR3
+
+Hardware ID : RE00010A
+
+Bootloader : U-Boot 2013.04 (Jun 23 2018 - 17:56:20)
+             baudrate=115200
+             boot_fdt=try
+             console=ttymxc0
+             ethprime=FEC
+             fdt_file=imx6q-limo.dtb
+             fdt_addr=0x18000000
+             fdt_high=0xffffffff
+             initrd_addr=0x12C00000
+             initrd_high=0xffffffff
+             ip_dyn=yes
+             kernel_first=0
+             kernel_second=1
+             kernel_upd=2
+             loadaddr=0x12000000
+             lpj=8495104
+             mfgtool_args=setenv bootargs console=ttymxc0,115200 rdinit=/linuxrc
+                          g_mass_storage.stall=0 g_mass_storage.removable=1
+                          g_mass_storage.idVendor=0x066F g_mass_storage.idProduct=0x37FF
+                          g_mass_storage.iSerialNumber="" enable_wait_mode=off
+             mmcroot=/dev/mmcblk0p1 rootwait ro
+             mmcrootfstype=ext4
+             norargs=setenv bootargs console=${console},${baudrate} ${smp} ${bootargs_quiet}
+                     root=${mmcroot} rootfstype=${mmcrootfstype} lpj=${lpj}
+             smp=
+             uimage=uImage
+             update_root=/dev/mmcblk0p5 rootwait ro
+             verify=no
+             bootcmd=if checkmpdiag; then
+                        echo mpdiag mem test;
+                        mpdiag_mem;
+                        reset;
+                    else if checkupdsw; then
+                            echo load kernel for update;
+                            setenv mmcroot ${update_root};
+                            copykrn ${loadaddr} ${kernel_upd};
+                            copyfdt ${fdt_addr} ${kernel_upd};
+                         else if checkkrnsw; then
+                                  echo load 2nd-kernel for normal;
+                                  copykrn ${loadaddr} ${kernel_second};
+                                  copyfdt ${fdt_addr} ${kernel_second};
+                              else echo load 1st-kernel for normal;
+                                  copykrn ${loadaddr} ${kernel_first};
+                                  copyfdt ${fdt_addr} ${kernel_first};
+                              fi;
+                         fi;
+                         run norboot;
+                    fi;
+             bootcmd_mfg=run mfgtool_args;bootm ${loadaddr} ${initrd_addr} ${fdt_addr};
+             bootargs_quiet=quiet
+             bootdelay=0
+
+DTS : <a href="/ilx702d/imx6q-limo.dts">imx6q-limo.dts</a>
+
+Operating System : Linux-3.10.17-1.0.0_ga
+
+Kernel message buffer on boot : <a href="/ilx702d/dmesg.html">dmesg</a>
+
+Flash dump : <a href="/ilx702d/H26M41208HPR/dump.html">eMMC NAND</a>, <a href="/ilx702d/S29GL256S/dump.html">NOR</a>, <a href="MX25L8035E/flash.dump">MX25L8035E</a>, <a href="S25FL116K/flash.dump">S25FL116K</a>
+</pre>
+  </td>
+</tr>
+
+
+<tr>
+  <td style="width:40%">
+    <a href="/ilx702d/panel-audio-top.jpeg"><img src="/ilx702d/panel-audio-top_small.jpeg" width=80%></img></a>
+  </td>
+  <td style="width:10%">
+    <a href="/ilx702d/panel-audio-top-shield-removed.jpeg">
+      <img src="/ilx702d/panel-audio-top-shield-removed_small.jpeg" width=80%></img>
+    </a>
+  </td>
+
+  <td><b>Panel Audio (top)</b>
+    <ul>
+      <li><div class="bullet bullet_green">
+              <p>Spansion S25FL116K - <a href="https://mil.ufl.edu/3744/docs/uPAD2p0/SPI_Flash_Memory.pdf">2MByte SPI Flash</a></p>
+      </div></li>
+      <li><div class="bullet bullet_violet">
+        <p>NXP F1502 ?</p>
+      </div></li>
+      <li><div class="bullet bullet_yellow">
+        <p>MXIC MX 25L8035E - <a href="https://www.mxic.com.tw/Lists/Datasheet/Attachments/7368/MX25L8035E,%203V,%208Mb,%20v1.4.pdf">8Mbit Serial NOR Flash</a></p>
+      </div></li>
+    </ul>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <a href="/ilx702d/panel-audio-bottom.jpeg"><img src="/ilx702d/panel-audio-bottom_small.jpeg" width=80%></img></a>
+  </td>
+
+  <td colspan="2"><b>Panel Audio (bottom)</b>
+    <ul>
+      <li><div class="bullet bullet_red">
+        <p>TI AHCUO4Q - <a href="http://www.ti.com/lit/ds/symlink/sn74ahcu04-q1.pdf">Hex inverters</a></p>
+      </div></li>
+      <li><div class="bullet bullet_orange">
+        <p>Renesas Technology 70F3479A - <a href="https://www.renesas.com/us/en/products/microcontrollers-microprocessors/v850/v850esx/v850esx3h.html">32bit MCU - LAN/CAN Controller</a><p>
+      </div></li>
+      <li><div class="bullet bullet_yellow">
+        <p>NXP SAF7754 - Audio DSP</p>
+      </div></li>
+      <li><div class="bullet bullet_green">
+        <p>NXP SAF3062 - <a href="https://www.nxp.com/docs/en/data-sheet/SAF360X_FAM_SDS.pdf">digital terrestrial radio processor</a></p>
+      </div></li>
+      <li><div class="bullet bullet_blue">
+        <p>ROHM BD3460 - 6ch Electronic Volume Control</p>
+      </div></li>
+      <li><div class="bullet bullet_violet">
+        <p>AKM AK7738VQ - Audio DSP</p>
+      </div></li>
+    </ul>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <a href="/ilx702d/panel-imx-top.jpeg"><img src="/ilx702d/panel-imx-top_small.jpeg" width=80%></img></a>
+  </td>
+
+  <td colspan="2"><b>Panel iMX (top)</b>
+    <ul>
+      <li><div class="bullet bullet_red">
+        <p>(left) AD(Linear) LTC3676 - <a href="https://www.analog.com/media/en/technical-documentation/data-sheets/LTC3676-3676-1.pdf">DC/DC Step Down Converter</a></p>
+      </div></li>
+      <li><div class="bullet bullet_red">
+        <p>(right) Cypress S29GL256S - <a href="https://www.cypress.com/file/177976/download">32MByte NOR Flash</a></p>
+      </div></li>
+      <li><div class="bullet bullet_orange">
+        <p>(left) ALPS UGKZ4 - Bluetooth v4.1 (CSR8311?) & WiFi 802.11b/g/n (CSR6026?)</p>
+      </div></li>
+      <li><div class="bullet bullet_orange">
+        <p>(right) AD - ADV7480 - <a href="https://www.analog.com/en/products/adv7480.html">Dual mode HDMI/MHL Receiver</a></p>
+      </div></li>
+      <li><div class="bullet bullet_yellow">
+        <p>AD - ADV7511W - <a href="https://www.analog.com/en/products/adv7511w.html">HDMI Transmitter</a></p>
+      </div></li>
+      <li><div class="bullet bullet_green">
+        <p>ROHM BU16002KVT - YCbCr output LVDS BT656 transmitter</p>
+      </div></li>
+      <li><div class="bullet bullet_blue">
+        <p>ST VHC14 - <a href="https://www.st.com/resource/en/datasheet/74vhc14.pdf">Hex Schmitt Inverter</a></p>
+      </div></li>
+      <li><div class="bullet bullet_light_blue">
+        <p>Maxim 16987RA - Voltage regulator?</p>
+      </div></li>
+      <li><div class="bullet bullet_violet">
+        <p>(top) ST VCX08 - Four 2-input AND gates</p>
+      </div></li>
+      <li><div class="bullet bullet_violet">
+        <p>(bottom) LAPIS ML22331 - <a href="http://www.lapis-semi.com/en/data/datasheet-file_db/speech/FEDL22321-01.pdf">Speech Synthesis LSI w/mask ROM</a></p>
+      </div></li>
+    </ul>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <a href="/ilx702d/panel-imx-bottom.jpeg"><img src="/ilx702d/panel-imx-bottom_small.jpeg" width=80%></img></a>
+  </td>
+
+  <td colspan="2"><b>Panel iMX (bottom)</b>
+    <ul>
+      <li><div class="bullet bullet_red">
+        <p>SKHynix H5TQ4G63EFR - <a href="https://www.skhynix.com/products.view.do?vseq=1866&cseq=74">DDR3 SRAM 512MByte @1866MHz</a></p>
+      </div></li>
+      <li><div class="bullet bullet_orange">
+        <p>NXP MXIMX6D6AVT08AD - <a href="https://www.nxp.com/docs/en/data-sheet/IMX6DQAEC.pdf">i.MX 6Dual CPU</a></p>
+      </div></li>
+      <li><div class="bullet bullet_yellow">
+        <p>Maxim MAX9288 - <a href="https://www.maximintegrated.com/en/products/interface/high-speed-signaling/MAX9288.html">Gigabit Multimedia Serial Link - Deserialiser</a></p>
+      </div></li>
+      <li><div class="bullet bullet_green">
+        <p>LAPIS ML86V8201 - <a href="http://www.lapis-semi.com/en/semicon/video/video-product.php?PartNo=ML86V8201#TabPage2">Display Controller for TFT LCD</a></p>
+      </div></li>
+      <li><div class="bullet bullet_blue">
+        <p>SKHynix H26M41208HPR - 8GByte e-MMC5.1 NAND</p>
+      </div></li>
+      <li><div class="bullet bullet_light_blue">
+        <p>Maxim MAX9275 - <a href="https://www.maximintegrated.com/en/products/interface/high-speed-signaling/MAX9275.html">Gigabit Multimedia Serial Link - Serialiser</p>
+      </div></li>
+    </ul>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <a href="/ilx702d/panel-gps-top.jpeg"><img src="/ilx702d/panel-gps-top_small.jpeg" width=40%></img></a>
+  </td>
+
+  <td colspan="2"><b>Panel GPS (top)</b>
+    <ul>
+      <li><div class="bullet bullet_red">
+        <p>FURUNO GV-8720B - <a href="https://www.furuno.com/jp/gnss/datadownload/GV-8720_HardwareSpecifications_SE16-410-009-05_en.pdf">GPS Receiver, Gyro, Accelerometer</a></p>
+      </div></li>
+      <li><div class="bullet bullet_orange">
+        <p>Infineon TLS4277E - Linear Voltage Regulator for antenna supply</p>
+      </div></li>
+      <li><div class="bullet bullet_yellow">
+        <p>Japan Radio JRC2903 - Voltage comparator (A/D converter / square-wave/pulse-gen </p>
+      </div></li>
+    </ul>
+  </td>
+</tr>
+
+</table>
+
+<br><br>
+<h2>iMX6 pinout:</h2>
+<pre>
+<a href="https://docs.google.com/spreadsheets/d/1GzADK-olYC6ieilXLmODBP4t6yadGGaQxg0ASYkNArE/edit?usp=sharing">Google Sheets</a>
+<a href="pin_layout.jpeg">Pin layout image</a>
+</pre>
+
+<br>
+<h2>UARTs :</h2>
+<pre>
+ttymxc0         - System console
+ttymxc1         - ALPS Bluetooth Module
+ttymxc2         - GPS
+ttymxc3         - CAN Interface
+</pre>
+
+<br>
+<h2>i2c buses:</h2>
+<pre>
+i2c@021a0000 (i2c0)
+    akm,ecnr_ak7736a        # Audio DSP
+    
+i2c@021a4000 (i2c1)
+    lapis,ml86v8201         # Display controller for TFT LCD
+    Panasonic,tc358748      # HDMI 1.4 to MIPI CSI-2 1.01 bridge chip (Camera interface?)
+    adv,adv748x             # Dual mode HDMI/MHL Receiver
+
+i2c@021a8000 (i2c2)
+    ti,ds90uh927q           # 24-bit Color FPD-Link III Serializer with HDCP
+    techwell,tcon_tw8834    # LCD Video Processor (Renesas)
+    jrc,nju6062             # Full Color LED Controller Driver
+    cypress,cyttsp4_i2c     # Touchscreen controller
+</pre>
+<br><br>
+</html>
+
+G4CyMz1GCyw0z7mr
+
+
