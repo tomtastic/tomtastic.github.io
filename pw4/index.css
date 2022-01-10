@@ -1,0 +1,48 @@
+
+.bullet {
+    line-height: 18px;
+    font-size:18px
+}
+
+.bullet_black, .bullet_standard {
+    color:#212426
+}
+
+.bullet_red {
+    color:#c1280b
+}
+
+.bullet_orange {
+    color:#ff9024
+}
+
+.bullet_yellow {
+    color:#f3e00e
+}
+
+.bullet_green {
+    color:#16dc81
+}
+
+.bullet_blue {
+    color:#2343e8
+}
+
+.bullet_light_blue {
+    color:#15a1d6
+}
+
+.bullet_violet {
+    color:#dc54b7
+}
+
+.clearer {
+    clear: both;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    font-size:0
+}
+
+

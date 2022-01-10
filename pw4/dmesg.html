@@ -1,0 +1,474 @@
+<pre>
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.1.15-lab126 (jenkins-official@sjc10-jbuild10) (gcc version 4.9.1 (GCC) ) #1 SMP PREEMPT Tue Nov 27 03:27:44 PST 2018
+[    0.000000] CPU: ARMv7 Processor [414fc091] revision 1 (ARMv7), cr=10c53c7d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] Machine model: Lab126 i.MX6SLL Board
+[    0.000000] dt: falcon bios 0x9ffd0000(0x30000)
+[    0.000000] dt: storage bios 0x9ffc0000(0x10000)
+[    0.000000] dt: falcon work 0x0
+[    0.000000] log_goal_location: 0x9be00000
+[    0.000000] Printk log placed at 0x9be00000
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] Falcon BIOS found.
+[    0.000000] On node 0 totalpages: 130304
+[    0.000000] free_area_init_node: node 0, pgdat 80bd7780, node_mem_map 9f9ff000
+[    0.000000]   DMA zone: 1024 pages used for memmap
+[    0.000000]   DMA zone: 0 pages reserved
+[    0.000000]   DMA zone: 130304 pages, LIFO batch:31
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] PERCPU: Embedded 12 pages/cpu @9ff94000 s17472 r8192 d23488 u49152
+[    0.000000] pcpu-alloc: s17472 r8192 d23488 u49152 alloc=12*4096
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 129280
+[    0.000000] Kernel command line: console=ttymxc0,115200 consoleblank=0 uart_at_4m root=/dev/mmcblk1p8 rootwait quiet secure_cpu=1 androidboot.secure_cpu=1 androidboot.prod=1 androidboot.unlocked_kernel=false
+[    0.000000] Prink buffer had been relocated to physical address: 0x9be00000
+[    0.000000] log_buf_len: 262144 bytes
+[    0.000000] early log buf free: 260116(99%)
+[    0.000000] PID hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Memory: 499552K/521216K available (8217K kernel code, 550K rwdata, 3064K rodata, 364K init, 574K bss, 21664K reserved, 0K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xa0800000 - 0xff000000   (1512 MB)
+    lowmem  : 0x80000000 - 0xa0000000   ( 512 MB)
+    modules : 0x7f000000 - 0x80000000   (  16 MB)
+      .text : 0x80008000 - 0x80b0c89c   (11283 kB)
+      .init : 0x80b0d000 - 0x80b68000   ( 364 kB)
+      .data : 0x80b68000 - 0x80bf1a88   ( 551 kB)
+       .bss : 0x80bf4000 - 0x80c83acc   ( 575 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] 	Additional per-CPU info printed with stalls.
+[    0.000000] 	RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=1.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] L2C-310 erratum 769419 enabled
+[    0.000000] L2C-310 enabling early BRESP for Cortex-A9
+[    0.000000] L2C-310: enabling full line of zeros but not enabled in Cortex-A9
+[    0.000000] L2C-310 ID prefetch enabled, offset 16 lines
+[    0.000000] L2C-310 dynamic clock gating enabled, standby mode enabled
+[    0.000000] L2C-310 cache controller enabled, 16 ways, 256 kB
+[    0.000000] L2C-310: CACHE_ID 0x410000c8, AUX_CTRL 0x76430001
+[    0.000000] mxc_clocksource_init 3000000
+[    0.000000] Switching to timer-based delay loop, resolution 333ns
+[    0.000008] sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+[    0.000023] clocksource mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+[    0.000963] Console: colour dummy device 80x30
+[    0.000980] Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+[    0.000994] pid_max: default: 32768 minimum: 301
+[    0.001102] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.001114] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.001602] CPU: Testing write buffer coherency: ok
+[    0.001813] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.001895] Setting up static identity map for 0x80008280 - 0x800082d8
+[    0.060202] Brought up 1 CPUs
+[    0.060218] SMP: Total of 1 processors activated (6.00 BogoMIPS).
+[    0.060226] CPU: All CPU(s) started in SVC mode.
+[    0.060691] devtmpfs: initialized
+[    0.067051] VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+[    0.069121] clocksource jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.069466] pinctrl core: initialized pinctrl subsystem
+[    0.070480] NET: Registered protocol family 16
+[    0.071311] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.100293] cpuidle: using governor ladder
+[    0.130316] cpuidle: using governor menu
+[    0.146020] hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+[    0.146035] hw-breakpoint: maximum watchpoint size is 4 bytes.
+[    0.148567] imx6sll-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+[    0.193665] SCSI subsystem initialized
+[    0.193885] libata version 3.00 loaded.
+[    0.194166] usbcore: registered new interface driver usbfs
+[    0.194232] usbcore: registered new interface driver hub
+[    0.194328] usbcore: registered new device driver usb
+[    0.195799] bd71827 0-004b: Device ID=0x31
+[    0.197435] bd71827 0-004b: BD71827_REG_INT_STAT_00=0x54 
+[    0.198259] bd71827 0-004b: BD71827_REG_INT_STAT_01=0x00 
+[    0.199077] bd71827 0-004b: BD71827_REG_INT_STAT_02=0x00 
+[    0.199888] bd71827 0-004b: BD71827_REG_INT_STAT_03=0x40 
+[    0.200742] bd71827 0-004b: BD71827_REG_INT_STAT_04=0x00 
+[    0.201562] bd71827 0-004b: BD71827_REG_INT_STAT_05=0x82 
+[    0.202376] bd71827 0-004b: BD71827_REG_INT_STAT_06=0x00 
+[    0.203185] bd71827 0-004b: BD71827_REG_INT_STAT_07=0x00 
+[    0.203996] bd71827 0-004b: BD71827_REG_INT_STAT_08=0x02 
+[    0.204810] bd71827 0-004b: BD71827_REG_INT_STAT_09=0x01 
+[    0.205620] bd71827 0-004b: BD71827_REG_INT_STAT_10=0x00 
+[    0.206428] bd71827 0-004b: BD71827_REG_INT_STAT_11=0x00 
+[    0.207238] bd71827 0-004b: BD71827_REG_INT_STAT_12=0x00 
+[    0.208052] bd71827 0-004b: BD71827_REG_INT_STAT_13=0x00 
+[    0.208063] bd71827 0-004b: RESET_REASON = 0x1
+[    0.208075] bd71827 0-004b: Reboot Reason: SOFTWARE_RESTART     Software Shutdown
+[    0.208482] bd71827 0-004b: gpio_intr = 120 
+[    0.208493] bd71827 0-004b: chip_irq=152 
+[    0.214760] bd71827-pmic bd71827-pmic: regulator register name 'buck1'
+[    0.216527] bd71827-pmic bd71827-pmic: regulator register name 'buck2'
+[    0.218259] bd71827-pmic bd71827-pmic: regulator register name 'buck3'
+[    0.219102] bd71827-pmic bd71827-pmic: regulator register name 'buck4'
+[    0.219950] bd71827-pmic bd71827-pmic: regulator register name 'buck5'
+[    0.220837] bd71827-pmic bd71827-pmic: regulator register name 'ldo1'
+[    0.221699] bd71827-pmic bd71827-pmic: regulator register name 'ldo2'
+[    0.222593] bd71827-pmic bd71827-pmic: regulator register name 'ldo3'
+[    0.223249] bd71827-pmic bd71827-pmic: regulator register name 'ldo4'
+[    0.224109] bd71827-pmic bd71827-pmic: regulator register name 'ldo5'
+[    0.224978] bd71827-pmic bd71827-pmic: regulator register name 'ldo6'
+[    0.225557] bd71827-pmic bd71827-pmic: regulator register name 'ldosnvs'
+[    0.225989] bd71827-pmic bd71827-pmic: Buck0: DVS Run-Idle-Susp[1100000 - 900000 - 900000].
+[    0.227172] bd71827-pmic bd71827-pmic: Buck1: DVS Run-Idle-Susp[1100000 - 900000 - 900000].
+[    0.229829] i2c i2c-0: IMX I2C adapter registered
+[    0.229849] i2c i2c-0: can't use DMA
+[    0.230571] i2c i2c-1: IMX I2C adapter registered
+[    0.230593] i2c i2c-1: can't use DMA
+[    0.231135] i2c i2c-2: IMX I2C adapter registered
+[    0.231153] i2c i2c-2: can't use DMA
+[    0.231288] Linux video capture interface: v2.00
+[    0.231370] pps_core: LinuxPPS API ver. 1 registered
+[    0.231381] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.231406] PTP clock support registered
+[    0.232403] MIPI CSI2 driver module loaded
+[    0.232570] Advanced Linux Sound Architecture Driver Initialized.
+[    0.233395] Bluetooth: Core ver 2.20
+[    0.233446] NET: Registered protocol family 31
+[    0.233456] Bluetooth: HCI device and connection manager initialized
+[    0.233472] Bluetooth: HCI socket layer initialized
+[    0.233485] Bluetooth: L2CAP socket layer initialized
+[    0.233525] Bluetooth: SCO socket layer initialized
+[    0.234374] Switched to clocksource mxc_timer1
+[    0.236413] cfg80211: World regulatory domain updated:
+[    0.236426] cfg80211:  DFS Master region: unset
+[    0.236433] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp), (dfs_cac_time)
+[    0.236445] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+[    0.236457] cfg80211:   (2457000 KHz - 2482000 KHz @ 20000 KHz, 92000 KHz AUTO), (N/A, 2000 mBm), (N/A)
+[    0.236467] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm), (N/A)
+[    0.236477] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (N/A)
+[    0.236488] cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (0 s)
+[    0.236498] cfg80211:   (5490000 KHz - 5730000 KHz @ 160000 KHz), (N/A, 2000 mBm), (0 s)
+[    0.236507] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm), (N/A)
+[    0.236516] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm), (N/A)
+[    0.243368] idme_init: hwid = 12
+[    0.243393] idme_init: alscal2 = 0
+[    0.243412] idme_init: alscal1 = 0
+[    0.243465] idme_init: vcom = -2830000
+[    0.243535] idme_init: 0 2
+[    0.243544] idme_init: bootmode = 0
+[    0.243622] idme_init: read serial successfully
+[    0.243640] idme_init: read board_id successfully
+[    0.243900] NET: Registered protocol family 2
+[    0.244538] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.244591] TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.244659] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.244725] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    0.244752] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    0.244908] NET: Registered protocol family 1
+[    0.245191] RPC: Registered named UNIX socket transport module.
+[    0.245203] RPC: Registered udp transport module.
+[    0.245210] RPC: Registered tcp transport module.
+[    0.245217] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.245421] Trying to unpack rootfs image as initramfs...
+[    0.257854] Freeing initrd memory: 3140K (9e9db000 - 9ecec000)
+[    0.260112] Bus freq driver module loaded
+[    0.261274] qbblk(storage): Enabled per clock
+[    0.261294] qbblk(storage): Enabled ipg clock
+[    0.261309] qbblk(storage): Enabled ahb clock
+[    0.261332] qbblk(storage): Enabled epit clock
+[    0.261341] qbblk(storage): Set pinctrl
+[    0.262251] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    0.268883] VFS: Disk quotas dquot_6.6.0
+[    0.269067] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.270463] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.271183] NFS: Registering the id_resolver key type
+[    0.271219] Key type id_resolver registered
+[    0.271227] Key type id_legacy registered
+[    0.271298] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    0.271983] fuse init (API version 7.23)
+[    0.276325] io scheduler noop registered
+[    0.276346] io scheduler deadline registered
+[    0.276544] io scheduler cfq registered (default)
+[    0.279505] MIPI DSI driver module loaded
+[    0.279664] MIPI DSI driver module loaded
+[    0.281598] imx-sdma 20ec000.sdma: no event needs to be remapped
+[    0.281743] imx-sdma 20ec000.sdma: loaded firmware 3.3
+[    0.284114] imx-sdma 20ec000.sdma: initialized
+[    0.285218] reg-virt-consumer regulator-virtuals:virt-buck1: attached: buck1
+[    0.285619] reg-virt-consumer regulator-virtuals:virt-buck2: attached: buck2
+[    0.285986] reg-virt-consumer regulator-virtuals:virt-buck3: attached: buck3
+[    0.286363] reg-virt-consumer regulator-virtuals:virt-buck4: attached: buck4
+[    0.286730] reg-virt-consumer regulator-virtuals:virt-buck5: attached: buck5
+[    0.287083] reg-virt-consumer regulator-virtuals:virt-ldo1: attached: ldo1
+[    0.287447] reg-virt-consumer regulator-virtuals:virt-ldo2: attached: ldo2
+[    0.287569] reg-virt-consumer regulator-virtuals:virt-ldo3: attached: ldo3
+[    0.287679] reg-virt-consumer regulator-virtuals:virt-ldo4: attached: ldo4
+[    0.287791] reg-virt-consumer regulator-virtuals:virt-ldo5: attached: ldo5
+[    0.288145] reg-virt-consumer regulator-virtuals:virt-ldo6: attached: ldo6
+[    0.288503] reg-virt-consumer regulator-virtuals:virt-ldosnvs: attached: ldosnvs
+[    0.289473] 2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 18, base_baud = 250000) is a IMX
+[    0.307289] console [ttymxc0] enabled
+[    0.307903] 2034000.serial: ttymxc2 at MMIO 0x2034000 (irq = 19, base_baud = 250000) is a IMX
+[    0.342597] imx-rng 21b4000.rngb: iMX RNG Registered.
+[    0.342786] [drm] Initialized drm 1.1.0 20060810
+[    0.343287] [drm] Initialized vivante 1.0.0 20120216 on minor 0
+[    0.352963] brd: module loaded
+[    0.357928] loop: module loaded
+[    0.358150] bt_pwrctrl_init called..
+[    0.358382] bt_reset pin obtained is 51
+[    0.358401] bt_dev_wake pin obtained is 116
+[    0.358413] bt_host_wake pin obtained is 93
+[    0.358432] IRQ# for BT HOST WAKE: 123
+[    0.362487] bt_pwrctrl_probe probe successful
+[    0.362601] frontlight /dev entries driver
+[    0.365537] misc frontlight: new frontlight device (backlight:bl) registered.
+[    0.369192] CAN device driver interface
+[    0.370761] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.370802] ehci-mxc: Freescale On-Chip EHCI Host driver
+[    0.370981] usbcore: registered new interface driver usb-storage
+[    0.371957] 2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+[    0.373125] mousedev: PS/2 mouse device common for all mice
+[    0.373878] input: 20cc000.snvs:snvs-powerkey as /devices/soc0/soc/2000000.aips-bus/20cc000.snvs/20cc000.snvs:snvs-powerkey/input/input0
+[    0.375561] bd71827-rtc bd71827-rtc: Enabling rtc-bd71827.
+[    0.380615] bd71827-rtc bd71827-rtc: rtc core: registered bd71827-rtc as rtc0
+[    0.381088] bd71827-rtc probe time: 120:9:1-10:58:45:
+[    0.381757] snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc1
+[    0.381915] i2c /dev entries driver
+[    0.383180] IR NEC protocol handler initialized
+[    0.383200] IR RC5(x/sz) protocol handler initialized
+[    0.383215] IR RC6 protocol handler initialized
+[    0.383228] IR JVC protocol handler initialized
+[    0.383241] IR Sony protocol handler initialized
+[    0.383255] IR SANYO protocol handler initialized
+[    0.383265] IR Sharp protocol handler initialized
+[    0.383274] IR MCE Keyboard/mouse protocol handler initialized
+[    0.383286] IR XMP protocol handler initialized
+[    0.384550] max14656 2-0035: detected revision 15
+[    0.385957] bd71827_set_battery_parameters found battType:4, battID:0x52
+[    0.389245] bd71827_safe_charging_control on_off:0
+[    0.398659] input: bd71827-power as /devices/soc0/soc/2100000.aips-bus/21a0000.i2c/i2c-0/0-004b/bd71827-power/input/input1
+[    0.408610] usb_gadget_chg_det_sync
+[    0.410823] imx2-wdt 20bc000.wdog: use WDOG_B to reboot.
+[    0.411534] imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+[    0.412387] softdog: Software Watchdog Timer: 0.08 initialized. soft_noboot=0 soft_margin=60 sec soft_panic=0 (nowayout=0)
+[    0.412429] Bluetooth: HCI UART driver ver 2.3
+[    0.412459] Bluetooth: HCI UART protocol H4 registered
+[    0.412467] Bluetooth: HCI UART protocol BCSP registered
+[    0.412474] Bluetooth: HCI UART protocol ATH3K registered
+[    0.412717] usbcore: registered new interface driver bcm203x
+[    0.412859] usbcore: registered new interface driver btusb
+[    0.413085] usbcore: registered new interface driver ath3k
+[    0.413910] sdhci: Secure Digital Host Controller Interface driver
+[    0.413921] sdhci: Copyright(c) Pierre Ossman
+[    0.413951] sdhci-pltfm: SDHCI platform and OF driver helper
+[    0.416721] /soc/aips-bus@02100000/usdhc@02190000: voltage-ranges unspecified
+[    0.416907] sdhci-esdhc-imx 2190000.usdhc: assigned as wifi host
+[    0.418281] sdhci-esdhc-imx 2190000.usdhc: No vmmc regulator found
+[    0.418314] sdhci-esdhc-imx 2190000.usdhc: No vqmmc regulator found
+[    0.426963] kernel:pmic:clamp_soc:97,vbat:4253000
+[    0.464496] mmc0: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+[    0.477217] usbcore: registered new interface driver usbhid
+[    0.477229] usbhid: USB HID core driver
+[    0.569110] get_host_info: Found target host info
+[    0.569124] init_falcon_blk: Not Use interrupt
+[    0.594266]  mmcblk1: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p10
+[    0.602435] NET: Registered protocol family 26
+[    0.602469] Netfilter messages via NETLINK v0.30.
+[    0.602507] nfnl_acct: registering with nfnetlink.
+[    0.602571] nf_conntrack version 0.5.0 (7854 buckets, 31416 max)
+[    0.603104] ctnetlink v0.93: registering with nfnetlink.
+[    0.603397] nf_tables: (c) 2007-2009 Patrick McHardy <kaber@trash.net>
+[    0.603415] nf_tables_compat: (c) 2012 Pablo Neira Ayuso <pablo@netfilter.org>
+[    0.603884] xt_time: kernel timezone is -0000
+[    0.603909] IPVS: Registered protocols ()
+[    0.603951] IPVS: Connection hash table configured (size=4096, memory=32Kbytes)
+[    0.604055] IPVS: Creating netns size=872 id=0
+[    0.604095] IPVS: ipvs loaded.
+[    0.604600] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    0.604763] ipt_CLUSTERIP: ClusterIP Version 0.8 loaded successfully
+[    0.604825] arp_tables: (C) 2002 David S. Miller
+[    0.604906] NET: Registered protocol family 17
+[    0.604930] can: controller area network core (rev 20120528 abi 9)
+[    0.605015] NET: Registered protocol family 29
+[    0.605036] can: raw protocol (rev 20120528)
+[    0.605051] can: broadcast manager protocol (rev 20120528 t)
+[    0.605070] can: netlink gateway (rev 20130117) max_hops=1
+[    0.605336] Bluetooth: RFCOMM TTY layer initialized
+[    0.605358] Bluetooth: RFCOMM socket layer initialized
+[    0.605387] Bluetooth: RFCOMM ver 1.11
+[    0.605412] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    0.605420] Bluetooth: BNEP filters: protocol multicast
+[    0.605433] Bluetooth: BNEP socket layer initialized
+[    0.605449] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    0.605460] Bluetooth: HIDP socket layer initialized
+[    0.605532] 8021q: 802.1Q VLAN Support v1.8
+[    0.605592] Key type dns_resolver registered
+[    0.607047] cpu cpu0: dev_pm_opp_get_opp_count: device OPP not found (-19)
+[    0.614067] cpufreq: __cpufreq_add_dev: CPU0: Running at unlisted freq: 792000 KHz
+[    0.619718] cpufreq: __cpufreq_add_dev: CPU0: Unlisted initial frequency changed to: 996000 KHz
+[    0.664783] state=0
+[    1.116749] bd71827-rtc bd71827-rtc: setting system clock to 2020-10-01 10:58:46 UTC (1601549926)
+[    1.121959] ldo5: disabling
+[    1.122648] ldo4: disabling
+[    1.123087] eMMC_VCCQ: disabling
+[    1.123095] SD1_SPWR: disabling
+[    1.123250] ALSA device list:
+[    1.123257]   No soundcards found.
+[    1.123785] Freeing unused kernel memory: 364K (80b0d000 - 80b68000)
+[    1.125220] DEBUG:mount.c:396:find_waveform_file():device /dev/mmcblk1p2 is ready
+[    1.129850] INFO:mount.c:412:find_waveform_file():mount /dev/mmcblk1p2 to /mnt/wfm OK
+[    1.130736] INFO:update.c:118:find_file():find_file:118 Found 320_R221_AI1101_ED060KC4C3_TC.wrf.gz
+[    1.130766] INFO:mount.c:434:find_waveform_file():find 1 wrf files
+[    1.130872] DEBUG:eink.c:292:eink_init():Loading: /lib/modules/4.1.15-lab126/kernel/drivers/video/fbdev/mxc/mxc_epdc_v2_fb.ko 
+[    1.130892] INFO:eink.c:294:eink_init():Loading: /lib/modules/4.1.15-lab126/kernel/drivers/video/fbdev/mxc/mxc_epdc_v2_fb.ko waveform=320_R221_AI1101_ED060KC4C3_TC.wrf.gz
+[    1.131588] DEBUG:module.c:139:insmod():/lib/modules/4.1.15-lab126/kernel/drivers/video/fbdev/mxc/mxc_epdc_v2_fb.ko:loaded 148028 bytes. (148028)
+[    1.134491] Panel VCOM settings: -2830000 hwid: 12
+[    1.167352] imx_epdc_v2_fb 20f4000.epdc: use reserved working buffer @ 0x9b000000
+[    1.189629] imx_epdc_v2_fb 20f4000.epdc: ok to request xon pins 109
+[    1.196486] requesting waveform imx/epdc/epdc_ED060KC4.fw
+[    1.205495] imx_epdc_v2_fb 20f4000.epdc: mxc_epdc_fb_fw_handler:  enter 
+[    1.205578] imx_epdc_v2_fb 20f4000.epdc: read_mnt_wfm_v2: waveform at /mnt/wfm/waveform_to_use/320_R221_AI1101_ED060KC4C3_TC.wrf.gz
+[    1.205594] imx_epdc_v2_fb 20f4000.epdc: read_mnt_wfm_v2: open file (/mnt/wfm/waveform_to_use/320_R221_AI1101_ED060KC4C3_TC.wrf.gz) ok size=97391
+[    1.208523] imx_epdc_v2_fb 20f4000.epdc: read_mnt_wfm_v2: read file OK
+[    1.224334] imx_epdc_v2_fb 20f4000.epdc: allocate 3261253 byte @ a2c29000 for waveform
+[    1.229476] imx_epdc_v2_fb 20f4000.epdc: long 70 xswi 31c326
+[    1.229501] imx_epdc_v2_fb 20f4000.epdc: copy (31c326 - 31bee8) byte @ offset 31bee8 to acd buffer
+[    1.229528] imx_epdc_v2_fb 20f4000.epdc: copy (31bee8 - 31b628) byte @ offset 31b628 to vcd buffer
+[    1.229537] imx_epdc_v2_fb 20f4000.epdc: Retrieved voltage control information (0x8c0)
+[    1.229550] imx_epdc_v2_fb 20f4000.epdc: epd_vc_data mode=9 temp=13 size = 16 waveform_mc=10 waveform_trc=14
+[    1.229561] imx_epdc_v2_fb 20f4000.epdc:  -- VC Data version 0x0004 : vddh_ext = 0x0000, vee_ext = 0x0028, xon_len = 0x00fb, xon_delay = 0x0008, 
+[    1.229572] imx_epdc_v2_fb 20f4000.epdc: vddh = 0x07d0, vee = 0x0640, vcom_offset = 0x0000, v_l = 0x0108, vpdd_len = 0x001e  cs = 0x0073--
+[    1.229582] imx_epdc_v2_fb 20f4000.epdc: epd_vc_data mode=8 temp=13 size = 16 waveform_mc=10 waveform_trc=14
+[    1.229592] imx_epdc_v2_fb 20f4000.epdc:  -- VC Data version 0x0004 : vddh_ext = 0x0000, vee_ext = 0x0028, xon_len = 0x00fb, xon_delay = 0x0008, 
+[    1.229602] imx_epdc_v2_fb 20f4000.epdc: vddh = 0x07d0, vee = 0x0640, vcom_offset = 0x0000, v_l = 0x0108, vpdd_len = 0x001e  cs = 0x0073--
+[    2.404789] max14656_detect_worker:320 0x00, 0x00, 0x00, 0x1f
+[    2.404803] max14656_detect_worker:323 chg_type=0b0000
+[    2.404812] pmic_current_event_handler:1182 max dcin current:450mA, ifst:550mA
+[    2.425035] no charger connected:358 bitflags: 0x00
+[    2.425043] turn off VBUS
+[    2.894413] imx_epdc_v2_fb 20f4000.epdc: Update region is outside bounds of framebuffer.Aborting update.
+[    2.904162] INFO:module.c:163:insmod():Loaded module /lib/modules/4.1.15-lab126/kernel/drivers/video/fbdev/mxc/mxc_epdc_v2_fb.ko waveform=320_R221_AI1101_ED060KC4C3_TC.wrf.gz (148028 bytes)
+[    2.911383] INFO:eink.c:392:eink_init():eink initialized... (1575424 bytes)
+[    2.911498] DEBUG:recovery-util.c:745:choose_boot_mode():curr_time=1601549928 end_time=1601549928
+[    2.911543] DEBUG:keypad.c:105:keypad_set():keypad_set():keypad_fd=-1 biggest_fd=0x7ea40dac biggest_fd=0 s=0x7ea40e00
+[    3.912611] DEBUG:readkey.c:121:read_key():Timeout
+[    3.912653] DEBUG:recovery-util.c:762:choose_boot_mode():curr_time=1601549929 end_time=1601549928 **
+[    3.913370] INFO:recovery-util.c:409:battery_check():Battery ID is valid
+[    3.913448] INFO:gasgauge.c:103:gasgauge_get_charge_percent():Request high bus frequency!
+[    3.915088] INFO:gasgauge.c:114:gasgauge_get_charge_percent():Release high bus frequency!
+[    3.916391] INFO:recovery-util.c:417:battery_check():Battery percentage = 97
+[    3.916483] DEBUG:diskutil.c:404:device_size():device size: 13090749 sectors
+[    3.918028] INFO:gpt.c:56:alloc_read_gpt_entries():alloc_read_gpt_entries: count = 128 * 128 = 16384
+[    3.919832] INFO:gpt.c:256:check_and_create_gpt_partitions():check_and_create_gpt_partitions: checking userstore with gpt
+[    3.919895] INFO:gpt.c:56:alloc_read_gpt_entries():alloc_read_gpt_entries: count = 128 * 128 = 16384
+[    3.944468] INFO:mount.c:162:losetup_fat():Setup loop device /dev/loop0 for /dev/mmcblk1p10 + 1115693056
+[    3.947120] DEBUG:mount.c:184:mount_dosfs():Mounted /mnt-us (/dev/loop0)
+[    3.947143] INFO:gpt.c:200:check_gpt():check_gpt: find userstore file system
+[    4.034491] INFO:gpt.c:56:alloc_read_gpt_entries():alloc_read_gpt_entries: count = 128 * 128 = 16384
+[    4.064457] INFO:mount.c:162:losetup_fat():Setup loop device /dev/loop0 for /dev/mmcblk1p10 + 1115693056
+[    4.065281] DEBUG:mount.c:184:mount_dosfs():Mounted /mnt-us (/dev/loop0)
+[    4.065430] INFO:recovery-util.c:1715:autopilot_update():Checking for updates... (auto-pilot mode)
+[    4.065616] INFO:update.c:204:update_os():No update*.bin found; no update needed.
+[    4.154447] INFO:recovery-util.c:1754:autopilot_update():no updates found.
+[    5.448415] EXT3-fs (mmcblk1p8): mounted filesystem with ordered data mode
+[    5.448543] kjournald starting.  Commit interval 5 seconds
+[    6.440299] udevd (247): /proc/247/oom_adj is deprecated, please use /proc/247/oom_score_adj instead.
+[    8.282971] random: nonblocking pool is initialized
+[    9.003853] falcon: module license 'newBSD' taints kernel.
+[    9.003868] Disabling lock debugging due to kernel taint
+[    9.006111] BIOS require 5103616 bytes buffer
+[    9.006266] Allocate new buffer area
+[    9.048792] EXT3-fs (mmcblk1p3): mounted filesystem with ordered data mode
+[    9.050017] kjournald starting.  Commit interval 5 seconds
+[    9.342367] EXT3-fs (mmcblk1p9): using internal journal
+[    9.342947] EXT3-fs (mmcblk1p9): recovery complete
+[    9.342959] EXT3-fs (mmcblk1p9): mounted filesystem with ordered data mode
+[    9.344276] kjournald starting.  Commit interval 5 seconds
+[   11.229257] <<-GTP-INFO->> GTP driver installing....
+[   11.233810] <<-GTP-INFO->> GTP Driver Version: V2.4.0.1<2016/10/26>
+[   11.233824] <<-GTP-INFO->> GTP I2C Address: 0x14
+[   11.233947] <<-GTP-INFO->> GTP power on.
+[   11.243715] <<-GTP-INFO->> Guitar reset
+[   11.456269] <<-GTP-INFO->> IC Version: 967_1077
+[   11.476826] <<-GTP-INFO->> X_MAX: 1072, Y_MAX: 1448, TRIGGER: 0x01
+[   11.494486] <<-GTP-INFO->> create proc entry touch success
+[   11.494707] <<-GTP-INFO->> create proc entry gt9xx_config success
+[   11.494716] <<-GTP-INFO->> Esd started
+[   11.494724] <<-GTP-INFO->> Ready to run update thread.
+[   11.501814] input: goodix-ts as /devices/virtual/input/input2
+[   11.503144] <<-GTP-INFO->> GTP works in interrupt mode.
+[   11.503163] <<-GTP-INFO->> Applied memory size:2562.
+[   11.503170] <<-GTP-INFO->> I2C function: without pre and end cmd!
+[   11.503186] <<-GTP-INFO->> Create proc entry success!
+[   11.517923] <<-GTP-INFO->> FILE CFG Ver:99
+[   11.517937] <<-GTP-INFO->> IC CFG Ver:99
+[   11.517942] <<-GTP-INFO->> File CFG Ver <= Ic CFG Ver, update config aborted!
+[   11.552131] <<-GTP-INFO->> FILE HARDWARE INFO:00016000
+[   11.552145] <<-GTP-INFO->> FILE PID:967
+[   11.552151] <<-GTP-INFO->> FILE VID:1077
+[   11.552156] <<-GTP-INFO->> IC HARDWARE INFO:00900600
+[   11.552161] <<-GTP-INFO->> IC PID:967
+[   11.552165] <<-GTP-INFO->> IC VID:1077
+[   11.552171] <<-GTP-INFO->> Firmware length:90112(88K)
+[   11.552176] <<-GTP-INFO->> Don't meet the third condition.
+[   11.552181] <<-GTP-INFO->> File VID <= Ic VID, update aborted!
+[   24.495512] Mass Storage Function, version: 2009/09/11
+[   24.495528] LUN: removable file: (no medium)
+[   24.495612] LUN: removable file: (no medium)
+[   24.495620] Number of LUNs=1
+[   24.495630] Number of LUNs=1
+[   24.501934] g_mass_storage gadget: Internal Storage, version: 2009/09/11
+[   24.501951] g_mass_storage gadget: g_mass_storage ready
+[   41.834090] dhd_module_init in
+[   41.834122] dhd_module_init fw_image_unaligned=95980000 fw_image=95980000
+[   41.834156] brcm_wlan_power: setting gpio #[47] on
+[   41.985572] found wifi platform device bcmdhd_wlan
+[   41.986974] dhd_module_init out
+[   42.084306] mmc0: new high speed SDIO card at address 0001
+[   42.085086] alloc static buf at 9c880000!
+[   42.091224] DHD: dongle ram size is set to 524288(orig 524288) at 0x0
+[   42.091389] wifi_platform_get_mac_addr
+[   42.091414] brcm_wlan_get_country_code: WFO sku: cc=''
+[   42.121478] dhd_deferred_work_init: work queue initialized 
+[   42.122714] dhdsdio_download_code_file @4294941507: read fw to 95980000
+[   42.228873] dhdsdio_download_code_file @4294941518: finished download fw_image_size=365319
+[   42.229552] dhdsdio_download_nvram: len=1166 read
+[   42.229565] dhdsdio_download_nvram: len=1166 saved
+[   42.290471] dhd_bus_init: enable 0x06, ready 0x06 (waited 0us)
+[   42.290743] bcmsdh_oob_intr_register OOB irq=125 flags=4 
+[   42.291528] wifi_platform_get_mac_addr
+[   42.294547] Firmware up: op_mode=0x0005, MAC=44:54:23
+[   42.342828] Firmware version = wl0: Aug  7 2018 14:18:29 version 7.45.102.5 (r694614 CY) FWID 01-74e20b44
+[   42.346073] Dongle Host Driver, version 1.363.110.23 (r) Compiled from 
+[   42.346614] Register interface [wlan0]  MAC: 44:54:23
+[   51.081312] kernel:pmic:clamp_soc:96,vbat:4225000
+[   56.156357] found wifi platform device bcmdhd_wlan
+[   56.156501] unregister wifi platform drivers
+[   56.157737] brcm_wlan_power: setting gpio #[47] off
+[   56.266966] mmc0: card 0001 removed
+[   58.636990] dhd_module_init in
+[   58.637021] dhd_module_init fw_image_unaligned=95f00000 fw_image=95f00000
+[   58.637052] brcm_wlan_power: setting gpio #[47] on
+[   58.795640] found wifi platform device bcmdhd_wlan
+[   58.797014] dhd_module_init out
+[   58.894911] mmc0: new high speed SDIO card at address 0001
+[   58.897189] alloc static buf at 9c880000!
+[   58.902012] DHD: dongle ram size is set to 524288(orig 524288) at 0x0
+[   58.902185] wifi_platform_get_mac_addr
+[   58.902209] brcm_wlan_get_country_code: WFO sku: cc=''
+[   58.930483] dhd_deferred_work_init: work queue initialized 
+[   58.931709] dhdsdio_download_code_file @4294943188: read fw to 95f00000
+[   58.991192] dhdsdio_download_code_file @4294943194: finished download fw_image_size=365319
+[   58.991248] dhdsdio_download_nvram: len=1166 read
+[   58.991259] dhdsdio_download_nvram: len=1166 saved
+[   59.052245] dhd_bus_init: enable 0x06, ready 0x06 (waited 0us)
+[   59.052478] bcmsdh_oob_intr_register OOB irq=125 flags=4 
+[   59.053242] wifi_platform_get_mac_addr
+[   59.056253] Firmware up: op_mode=0x0005, MAC=44:54:23
+[   59.104492] Firmware version = wl0: Aug  7 2018 14:18:29 version 7.45.102.5 (r694614 CY) FWID 01-74e20b44
+[   59.107722] Dongle Host Driver, version 1.363.110.23 (r) Compiled from 
+[   59.108271] Register interface [wlan0]  MAC: 44:54:23
+[   63.175762] Connecting with 80:bc:8a ssid "S******A" len (8) channel=6
+[   63.220910] wl_bss_connect_done succeeded with 80:bc:8a
+[   63.279210] wl_bss_connect_done succeeded with 80:bc:8a
+[   63.848904] nf_conntrack: automatic helper assignment is deprecated and it will be removed soon. Use the iptables CT target to attach helpers instead.
+[   64.438883] bd71827-rtc bd71827-rtc: bd71827_rtc_set_time, rtc time set to 2020-10-01 10:59:47
+[   64.442056] bd71827-rtc bd71827-rtc: bd71827_rtc_alarm_irq_enable: disable rtc alarm
+[   94.896564] EXT3-fs (mmcblk1p8): using internal journal
+</pre>

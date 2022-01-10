@@ -1,0 +1,116 @@
+<html>
+<link rel="stylesheet" type="text/css" href="index.css">
+<body>
+
+
+<table border=0 cellspacing=15>
+<tr>
+  <td>
+    <img src="https://images-na.ssl-images-amazon.com/images/I/41uUB-BFIvL._SY300_QL70_.jpg" width=80%></img>
+  </td>
+  <td colspan="2">
+<pre>
+<div class="bullet bullet">Amazon Kindle Paperwhite 4</div>
+
+Hardware : Freescale i.MX6 SoloLite
+           512MB RAM
+
+Hardware ID : imx6sll-moonshine
+
+Bootloader : U-Boot 2016.03 (Dec 11 2018 - 23:53:19 +0000)
+             CPU:   Freescale i.MX6SLL rev1.1 996 MHz (running at 792 MHz)
+             CPU:   Commercial temperature grade (0C to 95C) at 43C
+             Reset cause: POR
+             Board: MX6SLL Rex
+             I2C:   ready
+             DRAM:  512 MiB
+             entering PMIC test mode
+             in PMIC test mode -- apply bootup workaround
+             switching back to PMIC user mode
+             setup_pmic_mode -- make sure pmic is in user mode
+             MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+             idme_initialize
+             Idme version is 2.x and set related function to V2.x
+             IDME table version 2.1
+             hibernation: Not from hibernation
+             Core : f770ee83 2018/03/16 19:49:02 (Licensed to Amazon Fulfillment Services,Inc..)
+             SBIOS: v2.0 2019/05/22 22:10:01
+             TTBR:9fffc059
+             Platform: v2.0 2019/05/22 22:10:01
+             fl
+             *** Warning - bad CRC, using default environment
+             In:    serial
+             Out:   serial
+             Err:   serial
+             Hardware Board: Unknown(12)
+             Board ID is P001F409--------
+             WAN module
+             secure_cpu: 1, production: 1, unlocked: 0
+             Boot mode is 0
+             Hit any key to stop autoboot:  1  0
+             boota mmc1
+             boota: trying to boot from partition: kernel
+             Certificate authenticated
+             ==============
+             Image Metadata
+             ==============
+             product:moonshine
+             signer:CodeSigner
+             Image AUTHENTICATED with PRODUCTION certificate
+             kernel   @ 83008000 (6663632)
+             ramdisk  @ 84000000 (5613568)
+             fdt      @ 83f00000 (93163)
+             ## Booting Android Image at 0x80800000 ...
+             Kernel load addr 0x83008000 size 6508 KiB
+             Kernel command line: console=ttymxc0,115200 consoleblank=0 uart_at_4m root=/dev/mmcblk1p8 \
+             rootwait quiet secure_cpu=1 androidboot.secure_cpu=1 androidboot.prod=1 androidboot.unlocked_kernel=false
+
+Bootloader environment:
+             baudrate=115200
+             loadaddr=0x80800000
+             fdt_high=0xffffffff
+             bootdelay=3
+
+
+DeviceTreeBinary : <a href="/pw4/imx6sll-rex.dtb">imx6sll-rex.dtb</a>, <a href="/pw4/moonshine-wfo.dtb">moonshine-wfo.dtb (WiFi)</a>, <a href="/pw4/moonshine-wan.dtb">moonshine-wan.dtb (Wifi+3G)</a>
+DeviceTreeSource : <a href="/pw4/imx6sll-rex.dts.html">imx6sll-rex.dts</a>, <a href="/pw4/moonshine-wfo.dts.html">moonshine-wfo.dts (WiFi)</a>, <a href="/pw4/moonshine-wan.dts.html">moonshine-wan.dts (Wifi+3G)</a>
+
+Operating System : Linux 4.1.15-lab126
+
+Kernel message buffer on boot : <a href="/pw4/dmesg.html">dmesg</a>
+
+Flash dump : <a href="/pw4/MMC/dump.html">eMMC NAND</a>
+</pre>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <a href="/pw4/panel-imx-top.jpeg"><img src="/pw4/panel-imx-top_small.jpeg" width=80%></img></a>
+  </td>
+
+  <td colspan="2"><b>Panel iMX (top)</b>
+    <ul>
+      <li><div class="bullet bullet_red">
+        <p>IC</p>
+      </div></li>
+    </ul>
+  </td>
+</tr>
+
+</table>
+
+<br>
+<h2>UARTs :</h2>
+<pre>
+ttymxc0         - System console
+ttymxc2         - ?
+</pre>
+
+<br>
+<h2>i2c buses:</h2>
+<pre>
+</pre>
+<br><br>
+</html>
+
